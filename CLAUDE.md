@@ -4,11 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Foundry-based Solidity smart contract development template with modern tooling. The project uses Node.js packages (via Bun) for dependency management instead of git submodules, and includes comprehensive testing, linting, and formatting tools.
+This is a Foundry-based Solidity smart contract development template with modern tooling. The project uses Node.js
+packages (via Bun) for dependency management instead of git submodules, and includes comprehensive testing, linting, and
+formatting tools.
 
 ## Development Commands
 
 ### Core Development
+
 - `forge build` - Build contracts
 - `forge test` - Run all tests
 - `forge test -vvv` - Run tests with verbose output (shows console.log)
@@ -17,6 +20,7 @@ This is a Foundry-based Solidity smart contract development template with modern
 - `forge fmt` - Format Solidity code
 
 ### Linting and Code Quality
+
 - `bun run lint` - Run full lint check (Solidity + Prettier)
 - `bun run lint:sol` - Lint only Solidity files (forge fmt + solhint)
 - `bun solhint "{script,src,tests}/**/*.sol"` - Run Solhint directly
@@ -24,15 +28,18 @@ This is a Foundry-based Solidity smart contract development template with modern
 - `bun run prettier:write` - Fix non-Solidity file formatting
 
 ### Testing Commands
+
 - `forge test` - Basic test run
 - `bun run test:coverage` - Same as `forge coverage`
 - `bun run test:coverage:report` - Generate HTML coverage report (requires lcov)
 
 ### Deployment
+
 - `forge script script/Deploy.s.sol --broadcast --fork-url http://localhost:8545` - Deploy to Anvil
 - Requires `MNEMONIC` environment variable for non-test deployments
 
 ### Utilities
+
 - `forge clean` - Clean build artifacts and cache
 - `bun run clean` - Remove cache and out directories
 
@@ -66,6 +73,7 @@ This is a Foundry-based Solidity smart contract development template with modern
 ## Testing Patterns
 
 The project includes examples of:
+
 - Basic unit tests with assertions
 - Fuzz testing with `vm.assume()` or `bound()`
 - Fork testing against mainnet (requires `API_KEY_ALCHEMY`)
